@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<title>My First Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #686868;
+}
+
+/* Style the header */
+.header {
+  background-color: #252525;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid hsl(61, 89%, 58%);
+  color: hsl(61, 89%, 58%);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #252525;
+  border: 2px solid hsl(61, 89%, 58%);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: hsl(61, 89%, 58%);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: hsl(61, 89%, 58%);
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+
+/* Fake image */
+.fakeimg {
+  background-color: hsl(58, 0%, 43%);
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: hsl(58, 98%, 76%);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: hsl(61, 89%, 58%);
+  background-color: #252525;
+  margin-top: 20px;
+  border: 2px solid hsl(61, 89%, 58%);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="https://www.w3schools.com/tags/att_form_method.asp">w3schools</a>
+  <a href="https://cw1.basu.ac.ir/">cw1</a>
+  <a href="https://www.coursera.org">coursera</a>
+  <a href="#" style="float:right">LinkR</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>PANDA</h2>
+      <h5>panda is eatting, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;"> <img src="Panda.jpg"  height="150"> </div>
+      <p>this panda is so cute..</p>
+      <p>The giant panda lives in a few mountain ranges in central China, mainly in Sichuan, but also in neighbouring Shaanxi and Gansu.[10] As a result of farming, deforestation, and other development, the giant panda has been driven out of the lowland areas where it once lived, and it is a conservation-reliant vulnerable species.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;"><img src="Koala.jpg"  height="150"></div>
+      <p>this koala is so cute..</p>
+      <p>Koalas can only live in one place in the world, Australia. The koala only eats Eucalyptus leaves and it eats so many leaves, it smells like the leaves. The koala hops from tree to tree and climbs the trees to get the leaves. ... The koala used to be endangered because people would kill the koala for its fur.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+	  <form action="/send" method="post" target="_blank">
+		<label for="fname">First name:</label>
+		<input type="text" id="fname" name="your_name"><br><br>
+		<label for="fname">Last name:</label>
+		<input type="text" id="lname" name="your_family"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	<p>Click on the submit button, and the form will be submittied using the POST method.</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+</body>
+</html>
